@@ -16,7 +16,9 @@ params = urllib.parse.urlencode({
     'model-version': 'latest',
 })
 img_url="https://media.istockphoto.com/photos/smiling-mixed-race-mature-man-on-grey-background-picture-id1319763895?b=1&k=20&m=1319763895&s=170667a&w=0&h=jhqKyg62cQVZ-NjDQjpcenCdHDrprkN4caRjk4K76E8="
-
+body = {
+    'url':img_url
+}
 import json
 body = json.dumps(body)
 try:
