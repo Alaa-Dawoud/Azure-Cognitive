@@ -4,7 +4,7 @@ import http.client, urllib.request, urllib.parse, urllib.error, base64
 # https://eastus.dev.cognitive.microsoft.com/docs/services/computer-vision-v3-2/operations/56f91f2e778daf14a499f21b
 headers = {
     # Request headers
-    'Content-Type': 'application/json',
+    'Content-Type': 'application/octet-stream',
     'Ocp-Apim-Subscription-Key': '{your key for cognitive service resource in keys and endpoint}',
 }
 
