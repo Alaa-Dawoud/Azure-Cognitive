@@ -36,7 +36,9 @@ body={"url":img_url}
 # body = [b]
 body = json.dumps(body)
 try:
-    conn = http.client.HTTPSConnection('{your model name}.cognitiveservices.azure.com')
+    conn = http.client.HTTPSConnection('{your model name}.cognitiveservices.azure.com') # or you can put eastus.api.cognitive.microsoft.com and change eastus to your service
+    # region like westus.api.cognitive.microsoft.com
+    # link below you can also remove https://{model name}.cognitiveservices.azure.com
     conn.request("POST", "https://{model name}.cognitiveservices.azure.com/face/v1.0/detect?%s" % params, body, headers) # /detect will be /findsimilars in find-similar.py file
     response = conn.getresponse()
     data = response.read()
