@@ -22,7 +22,9 @@ body ={
 }
 body = json.dumps(body)
 try:
-    conn = http.client.HTTPSConnection('{model name}.cognitiveservices.azure.com')
+    conn = http.client.HTTPSConnection('{model name}.cognitiveservices.azure.com')  # or you can put eastus.api.cognitive.microsoft.com and change eastus to your service
+    # region like westus.api.cognitive.microsoft.com
+    # link below you can also remove https://{model name}.cognitiveservices.azure.com
     conn.request("POST", "https://{model name}.cognitiveservices.azure.com/face/v1.0/findsimilars?%s" % params, body, headers)
     response = conn.getresponse()
     data = response.read()
